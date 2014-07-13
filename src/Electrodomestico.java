@@ -8,7 +8,7 @@ public class Electrodomestico {
 	
 	public Electrodomestico(){
 		this.precioBase = 100;
-		this.consumoEnergetico = consumoEnergetico.F;
+		this.consumoEnergetico = ConsumoEnergetico.F;
 		this.peso = 5;
 		this.color = Color.BLANCO;	
 		
@@ -21,11 +21,50 @@ public class Electrodomestico {
 		this.color = Color.BLANCO;	
 	}
 
-	public Electrodomestico(float precioBase,ConsumoEnergetico consumoEnergetico,float peso,Color color){
+	public Electrodomestico(float precioBase,char consumoEnergetico,float peso,String color){
 		this.precioBase = precioBase;
-		this.consumoEnergetico = consumoEnergetico;
+		this.consumoEnergetico = comprobarConsumoEnergetico(consumoEnergetico);
 		this.peso = peso;
-		this.color = color;
+		this.color = this.comprobarColor(color);
+	}
+	
+	private ConsumoEnergetico comprobarConsumoEnergetico(char letra){
+		
+		switch(letra){
+			case 'A':
+				return ConsumoEnergetico.A;
+			case 'B':
+				return ConsumoEnergetico.B;
+			case 'C':
+				return ConsumoEnergetico.C;
+			case 'D':
+				return ConsumoEnergetico.D;
+			case 'E':
+				return ConsumoEnergetico.E;
+			case 'F':
+				return ConsumoEnergetico.F;
+			default:
+				return ConsumoEnergetico.F;
+		}
+		
+	}
+	
+	private Color comprobarColor(String color){
+		switch(color){
+		case "BLANCO":
+			return Color.BLANCO;
+		case "NEGRO":
+			return Color.NEGRO;
+		case "AZUL":
+			return Color.AZUL;
+		case "ROJO":
+			return Color.ROJO;
+		case "GRIS":
+			return Color.GRIS;
+		default: 
+			return Color.BLANCO;
+		}
+		
 	}
 	
 	public float getPrecioBase() {
