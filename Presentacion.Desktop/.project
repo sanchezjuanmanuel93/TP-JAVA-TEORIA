@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>Negocio.Entidades</name>
+	<name>Presentacion.Desktop</name>
 	<comment></comment>
 	<projects>
+		<project>Negocio.Entidades</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
