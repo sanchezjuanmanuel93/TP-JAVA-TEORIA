@@ -10,7 +10,7 @@ public class Lavarropas extends Electrodomestico{
 	
 	public Lavarropas(int carga){
 		this.carga = carga;
-		super();
+	
 		
 	}
 	

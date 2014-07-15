@@ -31,7 +31,7 @@ public class Electrodomestico {
 	}
 	
 	protected int precioFinal(){
-		return precioBase+this.getConsumo()+this.getTamaÃ±o();
+		return precioBase+this.getConsumo()+this.getTamaño();
 	}
 	
 	protected ConsumoEnergetico comprobarConsumoEnergetico(char letra){
@@ -105,7 +105,7 @@ public class Electrodomestico {
 		this.precio = precio;
 	}
 	
-	private int getTamaÃ±o(){
+	private int getTamaño(){
 
 		int p=0;
 		if( (this.precio > 0) && (this.precio <= 19) ){
